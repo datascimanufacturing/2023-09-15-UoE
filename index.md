@@ -13,7 +13,7 @@ humandate: "15/09/2023"    # human-readable dates for the workshop (e.g., "Feb 1
 humantime: "9 AM - 5PM"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 2023-01-20      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2023-09-15        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Danai Korre", Kashyap Chhatbar] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+instructor: ["Danai Korre"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: [""]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["d.korre@ed.ac.uk"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, 
 collaborative_notes: https://pad.carpentries.org/20-1-2023_UoE # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
@@ -136,11 +136,8 @@ address.
 {% if page.latitude and page.longitude and online == "false" %}
 <p id="where">
   <strong>Where:</strong>
-  {{page.address == "online"}}.
+  {{page.address}}.
   Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
 </p>
 {% elsif online == "true_public" %}
 <p id="where">
